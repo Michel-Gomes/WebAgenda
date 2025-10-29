@@ -1,0 +1,62 @@
+<nav class="navbar navbar-expand-lg bg-primary shadow-sm" data-bs-theme="dark">
+  <div class="container-fluid px-4">
+
+    <!-- Logo -->
+    <a class="navbar-brand d-flex align-items-center gap-2" routerLink="/pages/dashboard">
+      <i class="bi bi-calendar-check"></i>
+      <span class="fw-bold">AgendaWeb</span>
+    </a>
+
+    <!-- Botão colapsável (mobile) -->
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+      data-bs-target="#navbarMenu" aria-controls="navbarMenu"
+      aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <!-- Conteúdo -->
+    <div class="collapse navbar-collapse" id="navbarMenu">
+      <!-- Menu esquerdo -->
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/pages/dashboard" routerLinkActive="active">
+            <i class="bi bi-speedometer2 me-1"></i> Dashboard
+          </a>
+        </li>
+
+        <!-- Dropdown tarefas -->
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" role="button"
+            data-bs-toggle="dropdown" aria-expanded="false">
+            <i class="bi bi-list-task me-1"></i> Tarefas
+          </a>
+          <ul class="dropdown-menu">
+            <li>
+              <a class="dropdown-item" routerLink="/pages/cadastrar-tarefas">
+                <i class="bi bi-plus-circle me-1"></i> Cadastrar
+              </a>
+            </li>
+            <li>
+              <a class="dropdown-item" routerLink="/pages/consultar-tarefas">
+                <i class="bi bi-search me-1"></i> Consultar
+              </a>
+            </li>
+          </ul>
+        </li>
+      </ul>
+
+      <!-- Usuário logado / Logout -->
+      <div class="d-flex align-items-center border-start ps-3 ms-auto">
+        <span class="text-white me-3 small">
+          <i class="bi bi-person-circle me-1"></i>
+          <span class="fw-semibold">{{ nome() }}</span>
+        </span>
+        <button class="btn btn-outline-light btn-sm d-flex align-items-center gap-1"
+          (click)="logout()">
+          <i class="bi bi-box-arrow-right"></i>
+          Sair
+        </button>
+      </div>
+    </div>
+  </div>
+</nav>
