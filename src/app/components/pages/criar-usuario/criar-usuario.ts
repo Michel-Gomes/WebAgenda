@@ -24,6 +24,8 @@ export class CriarUsuario {
   mensagemSucesso = signal<string>('');
   mensagemErro = signal<string>('');
 
+  mostrarSenha = signal<boolean>(false);
+
 
   //injeção de dependência
   private http = inject(HttpClient);
@@ -38,6 +40,7 @@ export class CriarUsuario {
     confirmarSenha: new FormControl('', [Validators.required]),
     termos: new FormControl(false, [Validators.requiredTrue])
   });
+mostrarConfirmarSenha: any;
 
 
   //método chamado ao submeter o formulário
@@ -69,5 +72,10 @@ export class CriarUsuario {
           this.mensagemErro.set(e.error.errors);
         }
       });
+    }
+
+      //função para alternar a visibilidade da senha
+    alternarVisibilidadeSenha() {
+      this.mostrarSenha.set(!this.mostrarSenha());
   }
 }

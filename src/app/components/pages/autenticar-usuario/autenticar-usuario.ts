@@ -22,12 +22,13 @@ export class AutenticarUsuario {
 
   private http = inject(HttpClient);
   private router = inject(Router);
+
+  mostrarSenha = signal<boolean>(false);
   
  //estrutura do formulário
   formAutenticacao = new FormGroup({
     email : new FormControl('', [Validators.required, Validators.email]),
-    senha : new FormControl('', [Validators.required, 
-                                Validators.minLength(8)])
+    senha : new FormControl('', [Validators.required, Validators.minLength(8)])
   });
 
 
@@ -50,6 +51,11 @@ export class AutenticarUsuario {
           this.mensagemErro.set(e.error.errors);
          }  
       });
+    }
+
+    //função para alternar a visibilidade da senha
+    alternarVisibilidadeSenha() {
+      this.mostrarSenha.set(!this.mostrarSenha());
 
   }
 }

@@ -1,0 +1,37 @@
+.bg-gradient {
+  background: linear-gradient(135deg, #831fda, #8617a8);
+  min-height: 100vh;
+}
+
+.card {
+  background-color: #fff;
+  border: none;
+}
+
+.form-control {
+  border-radius: 8px;
+  height: 40px;
+  font-size: 0.95rem;
+}
+
+.btn-primary {
+  background-color: #831fda;
+  border: none;
+  border-radius: 8px;
+  height: 42px;
+  font-weight: 500;
+  transition: background 0.3s ease;
+}
+
+.btn-primary:hover {
+  background-color: #6f14c3;
+}
+
+a {
+  color: #831fda;
+  font-weight: 500;
+}
+
+a:hover {
+  text-decoration: underline;
+}

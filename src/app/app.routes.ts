@@ -6,11 +6,16 @@ import { Dashboard } from './components/pages/dashboard/dashboard';
 import { AutenticarUsuario } from './components/pages/autenticar-usuario/autenticar-usuario';
 import { CriarUsuario } from './components/pages/criar-usuario/criar-usuario';
 import { authGuard } from './guards/auth-guard';
+import { EsqueciSenha } from './components/pages/esqueci-senha/esqueci-senha';
 
 export const routes: Routes = [
     {
         path: 'pages/autenticar-usuario',
         component: AutenticarUsuario
+    },
+    {
+        path: 'pages/esqueci-senha',
+        component: EsqueciSenha
     },
     {
         path: 'pages/criar-usuario',
