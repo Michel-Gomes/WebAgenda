@@ -1,20 +1,26 @@
 # WebAgenda
 
-Aplicação web para **gerenciamento de agendamentos**, desenvolvida com **Angular** e **TypeScript**, como parte de uma aplicação baseada em microsserviços.
+Aplicação web para **gerenciamento de agendamentos**, desenvolvida com **Angular 20** e **TypeScript**, como parte de uma aplicação Full Stack baseada em microsserviços.
 
-O projeto faz parte do ecossistema **WebAgenda**, desenvolvido durante a formação Full Stack, juntamente com os microsserviços `ApiAgenda` e `ApiAutenticacao`.
+O projeto integra o ecossistema **WebAgenda**, juntamente com os microsserviços `ApiAgenda` e `ApiAutenticacao`.
 
 ## Tecnologias
 
 * Angular 20
-* TypeScript
+* TypeScript 5.8
+* RxJS
+* Bootstrap 5.3
+* Bootstrap Icons
+* Highcharts 12
+* Angular Highcharts
+* Angular Router
+* Angular Forms
 * HTML5
 * CSS
-* Angular CLI
 * Node.js
 * NPM
-* Consumo de APIs REST
-* Integração com microsserviços
+* Jasmine
+* Karma
 
 ## Arquitetura
 
@@ -22,7 +28,7 @@ O `WebAgenda` atua como frontend da aplicação, realizando a comunicação com 
 
 ```text
                          WebAgenda
-                   Angular + TypeScript
+                   Angular 20 + TypeScript
                            |
               +------------+------------+
               |                         |
@@ -34,7 +40,7 @@ O `WebAgenda` atua como frontend da aplicação, realizando a comunicação com 
 
 ## Funcionalidades
 
-A aplicação frontend foi desenvolvida para consumir as APIs do sistema e disponibilizar uma interface web para o usuário.
+A aplicação frontend foi desenvolvida para consumir as APIs REST do sistema e disponibilizar uma interface web para os usuários.
 
 Entre os recursos trabalhados no projeto estão:
 
@@ -47,6 +53,8 @@ Entre os recursos trabalhados no projeto estão:
 * Autenticação utilizando JWT
 * Interface com modo claro e escuro
 * Comunicação com microsserviços
+* Componentes e formulários utilizando Angular
+* Visualização de informações através de gráficos
 
 ## Integração com as APIs
 
@@ -68,7 +76,13 @@ Responsável pelo gerenciamento dos agendamentos.
 http://localhost:8081
 ```
 
-O frontend utiliza essas APIs para realizar operações de autenticação, usuários e agendamentos.
+O frontend utiliza essas APIs para realizar operações relacionadas à autenticação, usuários e agendamentos.
+
+## Interface
+
+A interface utiliza **Bootstrap 5.3** para estrutura e componentes visuais, juntamente com **Bootstrap Icons**.
+
+O projeto também utiliza **Highcharts** através do `angular-highcharts` para criação e apresentação de gráficos.
 
 ## Estrutura do projeto
 
@@ -87,7 +101,7 @@ WebAgenda
 └── README.md
 ```
 
-A aplicação utiliza a organização de componentes e recursos do Angular para separar as responsabilidades da interface e da comunicação com as APIs.
+A aplicação utiliza componentes, formulários, rotas e recursos do Angular para organizar a interface e a comunicação com as APIs.
 
 ## Executando o projeto
 
@@ -119,13 +133,13 @@ npm install
 ### Executar a aplicação
 
 ```bash
-ng serve
+npm start
 ```
 
 Ou:
 
 ```bash
-npm start
+ng serve
 ```
 
 Após iniciar a aplicação, acesse:
@@ -139,10 +153,30 @@ http://localhost:4200
 Para gerar uma versão de produção:
 
 ```bash
+npm run build
+```
+
+Ou:
+
+```bash
 ng build
 ```
 
-Os arquivos gerados estarão no diretório de distribuição configurado pelo Angular.
+## Testes
+
+O projeto possui configuração para testes utilizando **Jasmine** e **Karma**.
+
+Para executar os testes:
+
+```bash
+npm test
+```
+
+Ou:
+
+```bash
+ng test
+```
 
 ## Projeto completo
 
@@ -156,13 +190,13 @@ O `WebAgenda` faz parte de um projeto Full Stack baseado em microsserviços:
 
 ### Repositórios
 
-* **WebAgenda** — frontend
+* **WebAgenda** — frontend da aplicação
 * **ApiAgenda** — microsserviço de agendamentos
 * **ApiAutenticacao** — microsserviço de autenticação
 
 ## Objetivo do projeto
 
-O projeto foi desenvolvido com o objetivo de praticar o desenvolvimento de aplicações Full Stack e a integração entre frontend e backend utilizando:
+O projeto foi desenvolvido durante a formação Full Stack com o objetivo de praticar o desenvolvimento de aplicações web e a integração entre frontend e backend utilizando:
 
 * Angular
 * TypeScript
@@ -172,9 +206,11 @@ O projeto foi desenvolvido com o objetivo de praticar o desenvolvimento de aplic
 * PostgreSQL
 * JWT
 * Microsserviços
-* Docker
-* Integração entre aplicações
+* Bootstrap
+* Highcharts
+* Testes automatizados
 
 ## Autor
 
 **Michel Gomes**
+Desenvolvedor Java
